@@ -39,4 +39,3 @@ module.exports = app => {
 
 }
 
-// db.Burger.Findall({})
