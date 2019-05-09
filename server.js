@@ -30,3 +30,10 @@ app.get("*", function(req, res) {
 app.listen(PORT, function () {
   console.log("Listening on PORT: " + PORT);
 });
+
+// initialize server
+db.sequelize.sync({ force: false }).then(function() {
+  app.listen(PORT, function() {
+    console.log("App listening on PORT " + PORT);
+  });
+});
