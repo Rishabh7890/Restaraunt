@@ -1,6 +1,6 @@
 USE burgerTwo_db;
 
-INSERT INTO Burger
+INSERT INTO Burgers
   (burger_name)
   VALUES
   ("Classic Cheeseburger"),
