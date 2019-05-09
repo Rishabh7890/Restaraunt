@@ -1,0 +1,16 @@
+body {
+  background-color: rgb(240, 232, 128);
+  font-family: 'Roboto', sans-serif;
+}
+
+.appName {
+  font-family: 'Alfa Slab One', cursive;
+  color: rgb(240, 232, 128);
+}
+
+footer {
+  margin-top: 50px;
+  font-size: .5rem;
+  padding: 30px 0;
+  text-align: center;
+}
