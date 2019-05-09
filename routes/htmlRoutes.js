@@ -6,7 +6,7 @@ module.exports = (app) => {
   
   app.get("/", function(req, res){
 
-    db.Burger.findAll()
+    db.Burgers.findAll()
       .then(dbBurgers => {
         res.render("index", {burgerData: dbBurgers})
       })

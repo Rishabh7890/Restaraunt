@@ -6,7 +6,7 @@ module.exports = app => {
 
   // route to pull all info 
   app.get("/api/burgers", function (req, res) {
-    db.Burger.findAll({})
+    db.Burgers.findAll({})
       .then(dbBurgers => res.json(dbBurgers))
       .catch(err => {
         console.log(err);
@@ -16,7 +16,7 @@ module.exports = app => {
 
   // route to add new burgers
   app.post("/api/burgers", function (req, res) {
-    db.Burger.create(req.body)
+    db.Burgers.create(req.body)
       .then(dbBurgers => res.json(dbBurgers))
       .catch(err => {
         console.log(err);
@@ -25,7 +25,7 @@ module.exports = app => {
   })
   // route to update exsisting burgers
   app.put("/api/burgers/:id", function (req, res) {
-    db.Burger.update( {devoured: req.body.devoured}, {
+    db.Burgers.update( {devoured: req.body.devoured}, {
         where: {
           id: req.params.id
         }
