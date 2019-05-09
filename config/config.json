@@ -4,6 +4,7 @@
     "password": "Rishabhmysql1",
     "database": "burgerTwo_db",
     "host": "localhost",
+    "port": 8080,
     "dialect": "mysql"
   },
   "test": {
