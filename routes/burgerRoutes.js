@@ -20,7 +20,7 @@ module.exports = app => {
       .then(dbBurgers => res.json(dbBurgers))
       .catch(err => {
         console.log(err);
-        res.jason(err);
+        res.json(err);
       });
   })
   // route to update exsisting burgers
