@@ -1,45 +1,42 @@
-var express = require("express");
-var router = express.Router();
-
+// require model functions
 var db = require("../models");
 
-// Get route for homepage
-router.get("/", function(req, res) {
-  res.redirect("/burgers");
-});
+// exports routes to be used in server.js
+module.exports = app => {
 
-router.get("/burgers", function(req, res) {
-  db.Burger.findAll({})
-    .then(function(results) {
-      res.locals.burgers = results;
-      res.render("index");
-    })
+  // route to pull all info 
+  app.get("/api/burgers", function (req, res) {
+    db.Burger.findAll({})
+      .then(dbBurgers => res.json(dbBurgers))
+      .catch(err => {
+        console.log(err);
+        res.json(err);
+      });
   });
 
-
-// Post route 
-router.post("/burgers/create", function(req, res) {
-  db.Burger.create({
-    burger_name : req.body.burger_name
-  }).then(function(result) {
-    console.log(result);
-    res.redirect("/");
+  // route to add new burgers
+  app.post("/api/burgers", function (req, res) {
+    db.Burger.create(req.body)
+      .then(dbBurgers => res.json(dbBurgers))
+      .catch(err => {
+        console.log(err);
+        res.jason(err);
+      });
+  })
+  // route to update exsisting burgers
+  app.put("/api/burgers/:id", function (req, res) {
+    db.Burger.update( {devoured: req.body.devoured}, {
+        where: {
+          id: req.params.id
+        }
+      })
+      .then(dbBurgers => res.json(dbBurgers))
+      .catch(err => {
+        console.log(err);
+        res.json(err);
+      });
   });
-});
 
-// Put route 
-router.put("/burgers/:id", function(req, res) {
-  console.log(req.body.devoured);
-  db.Burger.update({
-    devoured: req.body.devoured
-  }, {
-    where: {
-      id: req.params.id
-    }
-  }).then(function(results) {
-    console.log(results);
-    res.redirect("/");
-  });
-});
+}
 
-module.exports = router;
+// db.Burger.Findall({})
