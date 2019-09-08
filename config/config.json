@@ -1,7 +1,8 @@
 {
   "development": {
     "username": "root",
-	"password": "Rishabhmysql1",
+    // add pass when in dev mode
+	  "password": "",
     "database": "burgerTwo_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
