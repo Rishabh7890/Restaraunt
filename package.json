@@ -1,5 +1,5 @@
 {
-  "name": "burger",
+  "name": "Restaraunt",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Rishabh7890/burger.git"
+    "url": "git+https://github.com/Rishabh7890/Restaraunt.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Rishabh7890/burger/issues"
+    "url": "https://github.com/Rishabh7890/Restaraunt/issues"
   },
-  "homepage": "https://github.com/Rishabh7890/burger#readme",
+  "homepage": "https://github.com/Rishabh7890/Restaraunt#readme",
   "dependencies": {
     "dotenv": "^8.0.0",
     "express": "^4.16.4",
