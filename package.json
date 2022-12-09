@@ -19,7 +19,7 @@
   "homepage": "https://github.com/Rishabh7890/Restaraunt#readme",
   "dependencies": {
     "dotenv": "^8.0.0",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "express-handlebars": "^3.0.2",
     "mysql": "^2.17.1",
     "mysql2": "^1.6.5",
